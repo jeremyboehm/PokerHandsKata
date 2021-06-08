@@ -17,6 +17,10 @@ public abstract class Rank implements Comparable<Rank> {
         return new HighCard(1, highestCard);
     }
 
+    public static Rank pair(Card firstCard, Card secondCard, Card kicker) {
+        return new Pair(2, firstCard, secondCard, kicker);
+    }
+
     @Override
     public int compareTo(Rank other) {
         return Integer.compare(priority, other.priority);

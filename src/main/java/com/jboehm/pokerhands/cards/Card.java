@@ -11,6 +11,10 @@ public class Card implements Comparable<Card> {
         this.suit = suit;
     }
 
+    public CardValue getCardValue() {
+        return cardValue;
+    }
+
     @Override
     public int compareTo(Card cardToCompare) {
         return cardValue.getAssociatedValue().compareTo(cardToCompare.cardValue.getAssociatedValue());
